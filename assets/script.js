@@ -12,20 +12,20 @@ const collectEmployees = function() {
       var upperCaseChar = firstChar.toUpperCase();
       var restOfName = inputFirstName.slice(1, inputFirstName.length);
       restOfName = restOfName.toLowerCase();
-      var capitalisedFirstName = upperCaseChar + restOfName;
+      var capitalizedFirstName = upperCaseChar + restOfName;
 
     const inputLastName = prompt("Enter your employees last name.")
       var firstChar = inputLastName.slice(0, 1);
       var upperCaseChar = firstChar.toUpperCase();
       var restOfName = inputLastName.slice(1, inputLastName.length);
       restOfName = restOfName.toLowerCase();
-      var capitalisedLastName = upperCaseChar + restOfName;
+      var capitalizedLastName = upperCaseChar + restOfName;
 
     const inputSalary = parseInt(prompt("Enter your employees salary."))
 
     employeesArray.push ({
-      firstName: capitalisedFirstName,
-      lastName: capitalisedLastName,
+      firstName: capitalizedFirstName,
+      lastName: capitalizedLastName,
       salary: inputSalary
 
     })
