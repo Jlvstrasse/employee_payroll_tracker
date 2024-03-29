@@ -8,12 +8,24 @@ const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
   while (employeeInfo) {
     const inputFirstName = prompt("Enter your employees first name.")
+      var firstChar = inputFirstName.slice(0, 1);
+      var upperCaseChar = firstChar.toUpperCase();
+      var restOfName = inputFirstName.slice(1, inputFirstName.length);
+      restOfName = restOfName.toLowerCase();
+      var capitalisedFirstName = upperCaseChar + restOfName;
+
     const inputLastName = prompt("Enter your employees last name.")
+      var firstChar = inputLastName.slice(0, 1);
+      var upperCaseChar = firstChar.toUpperCase();
+      var restOfName = inputLastName.slice(1, inputLastName.length);
+      restOfName = restOfName.toLowerCase();
+      var capitalisedLastName = upperCaseChar + restOfName;
+
     const inputSalary = parseInt(prompt("Enter your employees salary."))
 
     employeesArray.push ({
-      firstName: inputFirstName,
-      lastName: inputLastName,
+      firstName: capitalisedFirstName,
+      lastName: capitalisedLastName,
       salary: inputSalary
 
     })
@@ -42,8 +54,15 @@ const displayAverageSalary = function(employeesArray) {
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
+  const randomIndex = Math.floor(Math.random() * employeesArray.length);
 
+  const randomEmployee = employeesArray[randomIndex];
+
+  console.log('Congratulations ' + randomEmployee.firstName + ' ' + randomEmployee.lastName + '!')
 }
+
+
+
 
 /*
   ====================
